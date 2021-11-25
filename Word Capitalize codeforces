@@ -1,0 +1,11 @@
+import java.util.Scanner;
+public class WordCapitalizeCodeforces {
+    public static void main(String[] args) {
+        String s;
+        Scanner input = new Scanner(System.in);
+        s=input.nextLine();
+        char ch=s.charAt(0);
+        ch=Character.toUpperCase(ch);
+        System.out.println(ch+s.substring(1,s.length()));
+    }
+}
