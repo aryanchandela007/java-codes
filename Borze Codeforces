@@ -1,0 +1,31 @@
+import java.util.Scanner;
+public class BorzeCodeforces {
+    public static void main(String[] args) {
+        Scanner input=new Scanner(System.in);
+        String s= input.nextLine();
+        String result="";
+        for(int i=0;i<s.length();i++)
+        {
+
+            if (s.charAt(i)=='.')
+            {
+                result=result.concat("0");
+            }
+            if(s.charAt(i)=='-')
+            {
+                if(s.charAt(i+1)=='-')
+                {
+                    result=result.concat("2");
+                }
+                else if (s.charAt(i+1)=='.')
+                {
+                    result=result.concat("1");
+                }
+                i++;
+            }
+
+        }
+        System.out.println(result);
+        }
+    }
+
