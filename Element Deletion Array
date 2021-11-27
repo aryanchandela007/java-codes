@@ -1,0 +1,42 @@
+import java.util.Arrays;
+//import org.apache.commons.lang3.ArrayUtils;
+import java.util.Scanner;
+public class ArrayEleDel {
+    public static void main(String[] args) {
+        int n;
+        int ele;
+        Scanner input=new Scanner(System.in);
+        n=input.nextInt();
+        int arr[]=new int[n];
+        for(int i=0;i< arr.length;i++)
+        {
+            arr[i]= input.nextInt();
+        }
+        System.out.println("Enter element for deletion: ");
+        ele=input.nextInt();
+        int counter=0;
+       /*
+        int index=Arrays.asList(arr).indexOf(ele);
+        System.out.println(index);
+        int indexOfElement = ArrayUtils.indexOf(arr,ele);
+
+        */
+        n--;
+
+        for(int i=0;i<n;i++)
+        {
+         if(arr[i]==ele || counter>0)
+         {
+             arr[i]=arr[i+1];
+             counter++;
+         }
+        }
+
+        for(int i=0;i<n;i++)
+        {
+            System.out.print(arr[i]+" ");
+          //  System.out.println("arr["+i+"] ="+arr[i]);
+        }
+
+    }
+}
